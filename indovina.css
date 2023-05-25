@@ -1,0 +1,102 @@
+/* font-family: 'Kalam', cursive;    FONT PER ALCUNE FRASI */
+
+
+*{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    /* background: radial-gradient(circle, rgba(255,255,255,0.7063200280112045) 0%, rgb(230, 108, 1) 100%); */
+    background-image: url(./media/Tavola\ da\ disegno\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.fivemIcon{
+    width: 2rem;
+}
+
+.firma{
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+}
+
+.card{
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card:hover{
+    /* background-color:  rgb(236, 110, 0); */
+    background-color:  rgb(36, 36, 36);
+    color: white;
+    transform: scale(1.1);
+    
+}
+
+/* ANIMATION SLIDE */
+
+.slider{
+    height: 506px;
+    margin:auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track{
+    display: flex;
+    width: calc(250px*16);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    } 
+    100% {    
+        transform: translateX(calc(-250px*9))
+    }
+}
+
+.slide{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+ 
+
+.slider::before,
+.slider::after{
+    background: linear-gradient(to right,rgb(255, 255, 255)0%,
+    rgba(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    
+    z-index: 2;
+}
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
