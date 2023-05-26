@@ -1,4 +1,4 @@
-let img = document.querySelectorAll('img');
+let img  = document.querySelectorAll('img');
 console.log(img);
 
 let btnMagic = document.querySelector('#btnMagic');
